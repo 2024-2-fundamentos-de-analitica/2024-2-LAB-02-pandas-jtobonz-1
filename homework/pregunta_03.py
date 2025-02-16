@@ -21,3 +21,12 @@ def pregunta_03():
     Name: count, dtype: int64
 
     """
+
+    # Se importa la libreria pandas
+    import pandas as pd
+
+    # Se lee el archivo tbl0.tsv
+    tbl0 = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+
+    # Se agrupa por la columna c1 y se cuenta la cantidad de registros
+    return tbl0.groupby('c1').size()

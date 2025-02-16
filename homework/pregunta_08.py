@@ -22,3 +22,14 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
+
+    # Se importa la libreria pandas
+    import pandas as pd
+
+    # Se lee el archivo tbl0.tsv
+    tbl0 = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+
+    # Se agrega la columna suma
+    tbl0['suma'] = tbl0['c0'] + tbl0['c2']
+
+    return tbl0

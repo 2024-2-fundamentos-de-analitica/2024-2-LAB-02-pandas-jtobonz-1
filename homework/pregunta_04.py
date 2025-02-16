@@ -20,3 +20,12 @@ def pregunta_04():
     E    4.785714
     Name: c2, dtype: float64
     """
+
+    # Se importa la libreria pandas
+    import pandas as pd
+
+    # Se lee el archivo tbl0.tsv
+    tbl0 = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+
+    # Se agrupa por la columna c1 y se calcula el promedio de c2
+    return tbl0.groupby('c1')['c2'].mean()
